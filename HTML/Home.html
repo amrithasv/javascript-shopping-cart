@@ -3,36 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" 
-    rel="stylesheet"
-    
-    rel="stylesheets"/>
+    <title>Home</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../CSS/style.css">
 </head>
+
 <body>
-    <!-- Header -->
     <header>
         <nav>
-            <a href="">Shopping cart</a>
+            <div>
+                 <a href="">Shopping Cart</a>
+            </div>
+            <div>
+                <i class='bx bxs-cart' ></i>
+                <span class='badge badge-warning' id='lblCartCount'> 0 </span>
+            </div>
         </nav>
-        <i class="bx bx-shopping-bag"></i>
     </header>
-    <!-- Shopping section -->
-    <section>
-        <div>
-            <h2>Shopping products</h2>
-        </div>
-        <div>
-            <img src="../Images/bag.jpeg" alt="Image not found" />
-            <h3>
-                School bag
-            </h3>
-            <span>₹500</span>
-            <i class="bx bx-shopping-bag"></i>
-        </div>
-        
-    </section>
 
+
+    <div class="row-section">
+
+        <div class="card">
+            <img src="../Images/image1.jpeg" alt="Image not found">
+            <h2>bag</h2>
+            <span>₹800</span>
+            <i class="bx bxs-shopping-bag-alt"></i>
+            <div class="right">
+                <span>+</span>
+                <span>0</span>
+                <span>-</span>
+            </div>
+        </div>
     
+        <div class="card">
+            <img src="../Images/image2.jpeg" alt="Loading">
+            <h2>bottle</h2>
+            <span>₹300</span>
+            <i class='bx bxs-shopping-bag-alt'></i>
+            <div class="right">
+                <span>+</span>
+                <span>0</span>
+                <span>-</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="../Images/image3.jpeg" alt="Loading">
+            <h2>frock</h2>
+            <span>₹3500</span>
+            <i class='bx bxs-shopping-bag-alt'></i>
+            <div class="right">
+                <span>+</span>
+                <span>0</span>
+                <span>-</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="../Images/image4.jpeg" alt="Loading">
+            <h2>Shirt</h2>
+            <span>₹499</span>
+            <i class='bx bxs-shopping-bag-alt'></i>
+            <div class="right">
+                <span>+</span>
+                <span>0</span>
+                <span>-</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="../Images/image5.jpg" alt="Loading">
+            <h2>Shoes</h2>
+            <span>₹1000</span>
+            <i class='bx bxs-shopping-bag-alt'></i>
+            <div class="right">
+                <span>+</span>
+                <span>0</span>
+                <span>-</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="../Images/image6.jpeg" alt="Loading">
+            <h2>dress</h2>
+            <span>₹800</span>
+            <i class='bx bxs-shopping-bag-alt'></i>
+            <div class="right">
+                <span>+</span>
+                <span>0</span>
+                <span>-</span>
+            </div>
+        </div>
+
+        
+        
+    </div>
+
+    <box-icon name='shopping-bag'></box-icon>
+    <i class='bx bx-shopping-bag'></i>  
 </body>
 </html>
