@@ -193,18 +193,21 @@ function updateQuantity(name, newQuantity) {
 // Calculate and display the cart summary
 function calculateCartSummary() {
   const cartItems = getCartItems();
+  let totalItems = 0;
   let totalPrice = 0;
 
   cartItems.forEach((item) => {
     const price = parseFloat(item.price.substring(1));
-    totalPrice += price * item.quantity;
+    const quantity = item.quantity;
+    totalPrice += price * quantity;
+    totalItems += quantity;
   });
 
   const cartSummary = `
     <h3>Cart Summary</h3>
     <div class="summary-row">
       <span>Total Items:</span>
-      <span>${cartItems.length}</span>
+      <span>${totalItems}</span>
     </div>
     <div class="summary-row">
       <span>Total Price:</span>
@@ -214,16 +217,25 @@ function calculateCartSummary() {
   `;
 
   cartSummaryContainer.innerHTML = cartSummary;
-// Add event listener to the place order button
-const placeOrderButton = cartSummaryContainer.querySelector('#placeOrderBtn');
-placeOrderButton.addEventListener('click', () => {
-  placeOrder();
-  showOrderMessage();
-});
-}
 
-// Show order message
-function showOrderMessage() {
-const orderMessage = document.getElementById('orderMessage');
-orderMessage.style.display = 'block';
+  // Add event listener to the place order button
+  const placeOrderButton = cartSummaryContainer.querySelector('#placeOrderBtn');
+  placeOrderButton.addEventListener('click', () => {
+    placeOrder();
+    showAlertMessage();
+  });
+}
+// Show alert message
+function showAlertMessage() {
+  const orderMessage = document.createElement('div');
+  orderMessage.textContent = 'Order Placed!';
+  orderMessage.classList.add('order-message');
+
+  // Append the message to the cart summary container
+  cartSummaryContainer.appendChild(orderMessage);
+
+  // Hide the message after 3 seconds (adjust the time as needed)
+  setTimeout(() => {
+    orderMessage.remove();
+  }, 3000); // 3000 milliseconds = 3 seconds
 }
