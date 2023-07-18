@@ -89,6 +89,10 @@ body {
   body {
     background-color: rgb(255, 255, 255);
 }
+.plus-btn,
+.minus-btn {
+  cursor: pointer;
+}
 
 header {
     background-color: rgb(2, 129, 255);
@@ -166,4 +170,13 @@ th {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+.message {
+  display: none;
+  text-align: center;
+  background-color: #4fbec8;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
 }
